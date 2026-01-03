@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html,
+body {
+min-height: 100%;
+}
+body{
+ 
+}
+
+body.home{
+    background: url(../assets/home.png) center / cover no-repeat;
+}
+body.trees{
+    background: url(../assets/trees.jpeg) center / cover no-repeat;
+}
+body.music{
+    background: url(../assets/music.jpeg) center / cover no-repeat;
+}
+body.abp{
+    background: url(../assets/abp.jpeg) center / cover no-repeat;
+}
+
+body::before{
+    pointer-events: none;
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0, 0, .5)
+    z-index -1;
+
+}
+
+header{
+    padding:1rem 2rem;
+}
+
+nav{
+    display: flex;
+    gap: 13rem;
+}
+nav a{
+    font-family: 'poppins', 'sans-serif';
+    font-size: 30px;
+    font-weight: 700;
+    font
+    text-transform: uppercase;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+@keyframes animate-gradient {
+    to {
+        background-position: 200%;
+    }
+    
+}
+
+nav a:hover{
+    transition: 2s ease;
+    transform: scale(1.1);
+}
+
+main{
+    padding: 4rem 2rem;
+}
+h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+p{
+    max-width: 600px;
+    line-height: 1.6;
+}
